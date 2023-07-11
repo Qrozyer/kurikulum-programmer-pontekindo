@@ -133,14 +133,17 @@ $angka2 = 4;
 // echo "\n";
 
 // Ambil input lewat cli/terminal
-//  trim adalah fungsi bawaan php untuk menghapus spasi pada awal dan akhir data
+// trim adalah fungsi bawaan php untuk menghapus spasi pada awal dan akhir data
 // $misal = " faqih \n";
 // echo trim($misal);
 // fgets adalah fungsi untuk mengambil inputan dari cli/terminal
 // STDIN adalah standar input -> tempat untuk menyimpan data sebelum ditampilkan
-echo "------------ Menghitung luas persegi -----------" .PHP_EOL;
+echo "------------ Menghitung luas persegi -----------" . PHP_EOL;
 echo "Ketikkan sisi persegi : ";
 $sisi = trim(fgets(STDIN));
 $luas = $sisi * $sisi;
-echo "Sisi : $sisi" . PHP_EOL;
-echo "Luas : sisi * sisi\nLuas : $sisi * $sisi = $luas" . PHP_EOL;
+$keliling = 4 * $sisi;
+echo "Sisi : $sisi";
+echo PHP_EOL;
+echo "Luas : $sisi * $sisi = $luas" . PHP_EOL;
+echo "Keliling : 4 * $sisi = $keliling" . PHP_EOL;
