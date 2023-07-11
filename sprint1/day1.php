@@ -60,7 +60,8 @@ echo UMUR;
 echo "\n";
 
 echo $nama;
-echo "\n";
+var_dump($nama);
+echo PHP_EOL;
 
 // menghapus data di dalam variable menggunakan NULL
 $nama = NULL;
