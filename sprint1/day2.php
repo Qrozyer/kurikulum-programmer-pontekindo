@@ -133,6 +133,7 @@ $angka2 = 4;
 // echo "\n";
 
 // Ambil input lewat cli/terminal
+
 // trim adalah fungsi bawaan php untuk menghapus spasi pada awal dan akhir data
 // $misal = " faqih \n";
 // echo trim($misal);
