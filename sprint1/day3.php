@@ -35,10 +35,10 @@
 // var_dump(77<="77" && 25===25);
 
 // Or -> || / or : salah satu true maka hasilnya true
-// var_dump(6*4 ==  24 || 8/2 == 4);
+// var_dump(6*4 ==  21 || 8/2 == 0);
 
 // xor -> xor  : kalau input sama maka hasilnya false
-// var_dump(33<=34 xor 2%4 == 0);
+// var_dump(33<=34 xor 4%2 == 1);
 
 // Not -> ! : false
 
@@ -59,3 +59,4 @@
 // $angka = 22;
 // --$angka;
 // echo $angka .PHP_EOL;
+
