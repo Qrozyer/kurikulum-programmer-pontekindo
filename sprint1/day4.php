@@ -4,7 +4,7 @@
 // Statement : kalimat code hingga akhir / titik koma
 // Block : code yang berada di dalam {}
 
-// Percabangan -> if else
+// Percabangan / pengkondisian -> if else
 // echo "Masukkan Nama Santri : ";
 // $nama = trim(fgets(STDIN));
 // echo "Masukkan Nilai Santri: ";
