@@ -85,13 +85,6 @@ foreach ($array as $key => $value){
 }
 
 
-
-
-
-
-
-
-
 // Soal 4
 // $budi = 50000;
 // $jajan = 20000;

@@ -41,18 +41,18 @@ Merah
 Hijau
 */
 
-for ($i=-10; $i < 1; $i++) { 
-    if ($i == -5) {
-        continue; // diskip
-    } else if ($i == -10) {
-        echo "Hijau\n";
-    } else if($i == -2){
-        break; //berhenti
-    }else {
-        echo "$i\n";
-    }
-    // echo $i.PHP_EOL;
-}
+// for ($i=-10; $i < 1; $i++) { 
+//     if ($i == -5) {
+//         continue; // diskip
+//     } else if ($i == -10) {
+//         echo "Hijau\n";
+//     } else if($i == -2){
+//         break; //berhenti
+//     }else {
+//         echo "$i\n";
+//     }
+//     // echo $i.PHP_EOL;
+// }
 
 // while loop
 // Jika for seperti ini
@@ -96,22 +96,29 @@ for ($i=-10; $i < 1; $i++) {
 //     $balik = trim(fgets(STDIN));
 // }while($balik == "Y");
 
-
-// while($balik == "Y"){
-    // echo "=== MENU ===\n";
-    // echo "1. Masuk Apk\n";
-    // echo "2. Keluar\n";
-    // echo "Pilih : ";
-    // $menu = (int) trim(fgets(STDIN));
-    // if ($menu == 1) {
-        // echo "Masuk Apk\n";
-    // } else if ($menu == 2) {
-        // echo "Anda Telah Keluar\n";
+$condition = true;
+while($condition == true){
+    echo "=== MENU ===\n";
+    echo "1. Masuk Apk\n";
+    echo "2. Keluar\n";
+    echo "Pilih : ";
+    $menu = (int) trim(fgets(STDIN));
+    if ($menu == 1) {
+        echo "Masuk Apk\n";
+    } else if ($menu == 2) {
+        echo "Anda Telah Keluar\n";
+        exit;
+        die;
+    } else {
+        echo "Pilihan tidak tersedia\n";
+    }
+    echo "Balik ke menu Y/N : ";
+    $balik = trim(fgets(STDIN));
+    if ($balik == "N") {
+        echo "Terimakasih\n";
+        // $condition = false;
         // exit;
-        // die;
-    // } else {
-        // echo "Pilihan tidak tersedia\n";
-    // }
-    // echo "Balik ke menu Y/N : ";
-    // $balik = trim(fgets(STDIN));
-// }
+        // break;
+        die;
+    }
+}
