@@ -7,7 +7,7 @@ $array1 = ["Danu", "Dimas", "Faqih", "Hafidz", "Hanif", "Syifa", "Fandy"];
 // var_dump(count($array1));
 // echo $array1[2];
 
-// for ($i = 2; $i < 6; $i++) {
+// for ($i = 2; $i < count(array); $i++) {
 //         echo "$no. ". $array1[$i].PHP_EOL;
 //         $no++;
 // }

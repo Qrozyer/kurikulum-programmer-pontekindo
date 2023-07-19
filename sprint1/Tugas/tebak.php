@@ -10,7 +10,7 @@ while ($nyawa <= 3) {
 
     if (is_numeric($tebak)) {
         if ($tebak < $angka) {
-                echo "Terlalu rendah!\n";
+            echo "Terlalu rendah!\n";
         } elseif ($tebak > $angka) {
             echo "Terlalu tinggi!\n";
         } else {
@@ -20,32 +20,32 @@ while ($nyawa <= 3) {
             echo "Coba Lagi ??? ";
             echo "Y/N : ";
             $cobalagi = strtoupper(trim(fgets(STDIN)));
-            if($cobalagi == "Y"){
+            if ($cobalagi == "Y") {
                 $nyawa = 0;
                 $angka = mt_rand(1, 9);
-            }else if($cobalagi == "N"){
+            } else if ($cobalagi == "N") {
                 echo "Terimakasih Telah Bermain\n";
                 exit;
-            }else{
-                echo "Masukkan input yang valid\n"; 
+            } else {
+                echo "Masukkan input yang valid\n";
                 goto coba1;
             }
         }
 
-        if($nyawa == 3){
-            echo "Kesempatanmu habis! Angka yang benar adalah $angka.\n";
+        if ($nyawa == 3) {
             echo "\n########## GAME OVER ##########\n\n";
+            echo "Kesempatanmu habis! Angka yang benar adalah $angka.\n";
             coba:
             echo "Coba Lagi ??? ";
             echo "Y/N : ";
             $cobalagi = strtoupper(trim(fgets(STDIN)));
-            if($cobalagi == "Y"){
+            if ($cobalagi == "Y") {
                 $nyawa = 0;
                 $angka = mt_rand(1, 9);
-            }else if($cobalagi == "N"){
+            } else if ($cobalagi == "N") {
                 echo "Terimakasih Telah Bermain\n";
                 exit;
-            }else{
+            } else {
                 echo "Masukkan input yang valid\n";
                 goto coba;
             }
@@ -57,4 +57,3 @@ while ($nyawa <= 3) {
         echo "Masukkan angka yang valid.\n";
     }
 }
-?>
