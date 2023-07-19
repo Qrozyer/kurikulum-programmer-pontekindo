@@ -7,7 +7,7 @@ while ($attempt <= 3) {
     echo "Tebakanmu (percobaan ke-$attempt): ";
     $guess = trim(fgets(STDIN));
     if ($guess < $number) {
-        echo "Terlalu rendah! Coba lagi.\n";
+        echo "Terlalu rendah! Coba lagi.\n";        
     } 
     elseif ($guess > $number) {
         echo "Terlalu tinggi! Coba lagi.\n";

@@ -102,4 +102,4 @@ $c = ["Hello", "World", "Coding"];
 // implode -> mengubah array menjadi string
 // echo implode("-",$c);
 
-echo rand(0, 9);
+// echo rand(0, 9);
