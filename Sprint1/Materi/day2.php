@@ -11,43 +11,45 @@ Baris
 
 // Tipe Data Array
 
+
 // Jenis-jenis array
 // Array Numerik -> indexnya berupa angka yang dimana dimulai dari angka 0
-$array = ["string",321,true,null,-12.3];
-// var_dump($array);
+$data = ["string",321,true,null,-12.3];
+// var_dump($data);
 // echo $array[0];
 // echo PHP_EOL;
 
 // Array assosiatif -> indexnya/ array key bisa kita atur sendiri
 // Array assosiatif == Map (di bahasa pemrograman lain)
-$arrayAssoc = array(
-    "pertama" => 77.2, 
-    55 => "akhirudin", 
-    31 => false
-);
+// $arrayAssoc = array(
+//     "pertama" => 77.2, 
+//     55 => "akhirudin", 
+//     31 => false
+// );
+
+$data2 = ["saya" => "Fulan", 2 => "Fandy", "fandy" => true];
+
+// var_dump($data2);
 
 // var_dump($arrayAssoc);
 // echo $arrayAssoc["kedua"];
 
-// Array di dalam array
+// Array di dalam array / multidimensi
 $fandy = [
     "id" => 1,
     "name" => "fandy",
     "age" => 23,
     "address" => [
-        "region" => [
-            "bantul",
-            "sleman",
-            "yogya kota",
-            "kulon progo",
-            "gunung kidul"
-        ],
+        "region" => "bantul",
         "city" => "yogya",
         "country" => "indo"
     ]
 ];
 
-// echo $fandy["address"]["region"][4];
+$biasa = [[1,2,3],[1 => "saya",2 => "saya",],[]];
+
+// var_dump($fandy);
+// echo $fandy["address"]["region"][2];
 // echo PHP_EOL;
 
 // echo $array[0];
@@ -98,7 +100,7 @@ $num2 = 4;
 // echo "Modulus :";
 // echo 17 % 5;
 // echo "\n";
-echo "\n";
+// echo "\n";
 // $num1 = 22;
 // echo $num1;
 // echo "\n";
@@ -139,12 +141,16 @@ $angka2 = 4;
 // echo trim($misal);
 // fgets adalah fungsi untuk mengambil inputan dari cli/terminal
 // STDIN adalah standar input -> tempat untuk menyimpan data sebelum ditampilkan
-echo "------------ Menghitung luas persegi -----------" . PHP_EOL;
-echo "Ketikkan sisi persegi : ";
-$sisi = trim(fgets(STDIN));
-$luas = $sisi * $sisi;
-$keliling = 4 * $sisi;
-echo "Sisi : $sisi";
-echo PHP_EOL;
-echo "Luas : $sisi * $sisi = $luas" . PHP_EOL;
-echo "Keliling : 4 * $sisi = $keliling" . PHP_EOL;
+// echo "------------ Menghitung luas persegi -----------" . PHP_EOL;
+// echo "Ketikkan sisi persegi : ";
+// $sisi = strtolower(ucwords(trim(fgets(STDIN))));
+// echo $sisi;
+// $luas = $sisi * $sisi;
+// $keliling = 4 * $sisi;
+// echo "Sisi : $sisi";
+// echo PHP_EOL;
+// echo "Luas : $sisi * $sisi = $luas" . PHP_EOL;
+// echo "Keliling : 4 * $sisi = $keliling" . PHP_EOL;
+
+$input = (float) trim(fgets(STDIN));
+// var_dump($input);

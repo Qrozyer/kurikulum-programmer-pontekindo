@@ -19,7 +19,7 @@
 // // var_dump((bool) "false"); 
 
 // // Tipe Data String -> Karakter
-// var_dump("karakter");
+// var_dump("karakte47676@*#r");
 // echo '\nFandy\t Ahmad'; //petik 1 terbatas untuk karakter saja
 // echo "\nFandy\t Ahmad";
 
@@ -46,29 +46,42 @@ $umur = 23;
 $nama = "Hafidz";
 $umur = 19;
 
-echo 'Nama saya adalah $nama. Umur saya $umur';
-echo "\n";
-echo "\tNama saya adalah $nama. Umur saya $umur\n";
+// echo 'Nama saya adalah $nama. Umur saya $umur';
+// echo "\n";
+// echo "\tNama saya adalah $nama. Umur saya $umur\n";
 
 // CONSTANT / Konstanta -> tidak bisa dirubah
 // keterangan pertama pada define : nama konstantanya, yang kedua datanya
 define("NAMA", "FANDY"); // ->menggunakan function bawaan php define
 const UMUR = 23; // ->menggunakan const
-echo "\n";
-echo NAMA;
-echo UMUR;
-echo "\n";
+// echo "\n";
+// echo NAMA;
+// echo UMUR;
+// echo "\n";
 
-echo $nama;
-var_dump($nama);
-echo PHP_EOL;
+// echo $nama;
+// var_dump($nama);
+// echo PHP_EOL;
 
 // menghapus data di dalam variable menggunakan NULL
 $nama = NULL;
-var_dump(($nama));
+// var_dump(($nama));
 
-// menghapus variable
-unset($nama);
-echo $nama;
+// // menghapus variable
+// unset($nama);
+// echo $nama;
 // *var and const is case-sensitive (namanya kudu musti harus sesuai dengan yang dideklarasikan)
 
+// const TES = "tes";
+// echo TES;
+
+// $nama_produk;
+
+echo <<<tes
+ewfbni 
+    gwegweg
+                jbgewub
+
+
+        wgweg
+tes;

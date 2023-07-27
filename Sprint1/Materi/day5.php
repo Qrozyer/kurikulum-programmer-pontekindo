@@ -10,6 +10,7 @@
 //           ($nilai >= 60 ? "Good" : 
 //           "Not Passed"));
 // echo $result.PHP_EOL;
+// $hasil = $nilai > 100 ? "perfect" : "not perfect";
 
 // Buat pengkondisian menggunakan ternary yang menghasilkan nama buah sesuai warnanya apabila kita menginput suatu warna (dinamis). Misal bila menginput warna merah akan mengoutput buah apel.
 
@@ -57,7 +58,7 @@ Hijau
 // while loop
 // Jika for seperti ini
 // $i = 1;
-// for (; $i < 10;) {
+// for (; $i < 10 ;) {
 //     echo "Hello\n";
 //     $i++;
 // }
@@ -96,29 +97,30 @@ Hijau
 //     $balik = trim(fgets(STDIN));
 // }while($balik == "Y");
 
-$condition = true;
-while($condition == true){
-    echo "=== MENU ===\n";
-    echo "1. Masuk Apk\n";
-    echo "2. Keluar\n";
-    echo "Pilih : ";
-    $menu = (int) trim(fgets(STDIN));
-    if ($menu == 1) {
-        echo "Masuk Apk\n";
-    } else if ($menu == 2) {
-        echo "Anda Telah Keluar\n";
-        exit;
-        die;
-    } else {
-        echo "Pilihan tidak tersedia\n";
-    }
-    echo "Balik ke menu Y/N : ";
-    $balik = trim(fgets(STDIN));
-    if ($balik == "N") {
-        echo "Terimakasih\n";
-        // $condition = false;
-        // exit;
-        // break;
-        die;
-    }
-}
+// $condition = true;
+// while($condition == true){
+//     echo "=== MENU ===\n";
+//     echo "1. Masuk Apk\n";
+//     echo "2. Keluar\n";
+//     echo "Pilih : ";
+//     $menu = (int) trim(fgets(STDIN));
+//     if ($menu == 1) {
+//         echo "Masuk Apk\n";
+//     } else if ($menu == 2) {
+//         echo "Anda Telah Keluar\n";
+//         exit;
+//         die;
+//     } else {
+//         echo "Pilihan tidak tersedia\n";
+//     }
+//     echo "Balik ke menu Y/N : ";
+//     $balik = trim(fgets(STDIN));
+//     if ($balik == "N") {
+//         echo "Terimakasih\n";
+//         // $condition = false;
+//         // exit;
+//         // break;
+//         die;
+//     }
+// }
+

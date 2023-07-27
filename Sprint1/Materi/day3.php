@@ -6,7 +6,7 @@
 // var_dump("1728" == 1728);
 
 // // Identik -> === : nilai dan tipe data harus sama agar outputnya true
-// var_dump(1728 === 1728);
+// var_dump(1728 === '1728');
 
 // // Tidak sama dengan -> <> / != : nilainya tidak sama maka hasilnya true
 // var_dump(21 != "2");

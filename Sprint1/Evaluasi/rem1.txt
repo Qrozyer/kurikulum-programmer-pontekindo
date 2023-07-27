@@ -1,0 +1,58 @@
+BISMILLAH
+SPRINT 1 - SOAL EVALUASI 1
+
+1. Jelaskan perbedaan (||) dan (&&) dalam operator logika!
+   Beserta Contoh Prakteknya...
+
+2. Jelaskan perbedaan operator kali pada aritmatika dengan kali pada penugasan! Buatkan contohnya!
+
+3. Buatlah daftar id, judul buku, pustaka, harga buku dalam bentuk Array Assosiative!
+
+4. $a = 2 // pangkat
+   $b = 9 
+   Buatlah Dalam Menggunakan Operator Aritmatika Dengan Jenis Pangkat ...
+   Dimana variable b pangkat variable a
+
+5. Buatlah TERNARY Untuk Menampilkan tingkatan suhu suatu ruangan! 
+   Dengan expression / Ekspresi Didalamnya Ada Operator Perbandingan
+   Kurang dari 20 celcius : dingin , 21-35 normal, lebih dari 35 panas
+
+
+SPRINT 2 - SOAL EVALUASI 2
+
+1. Kelompokkan input dinamis, 
+- apabila dua karakter index 5-6 adalah angka di bawah 20 maka menampilkan kalimat 'low HP'
+- apabila dua karakter index 5-6 adalah angka di bawah 40 maka menampilkan kalimat 'enough HP'
+- apabila dua karakter index 5-6 adalah angka di atas 70 maka menampilkan kalimat 'good HP'
+
+2. $array = [5,26,79,4,63,22.17,9];
+- urutkan array berikut dari yang terkecil
+- pisahkan antara data yang ganjil dan yang genap
+Urutan kecil ke besar: 
+ganjil :
+genap :
+
+*** data berikut untuk soal no 5-7
+$data = [
+   "id" => 582,
+   "nama" => "pisang",
+   "warna" => "kuning",
+   "stok" => "51
+];
+
+3. Tambah data rasa dengan value manis pada array di atas 
+4. Hapus data warna pada array di atas
+5. Ubah stok menjadi 32 dan tampilkan key dan valuenya dengan menggunakan foreach
+
+------
+
+*** KALIAN BOLEH LIHAT SUMBER DARI ***
+1. php.net
+2. w3schools
+3. stackoverflow
+
+*** WAKTU MENGERJAKAN SAMPAI ASHAR - SEBELUM MEMULAI EVALUASI PERTAMA BERDOA TERLEBIH DAHULU ***
+
+*** EVALUASI KALIAN PUSH KE GITHUB DENGAN FOLDER EVALUASI1 DI DALAM REPO KURIKULUMPROGRAMMERPOTEKINDO - KIRIM LINK GITHUB KE WA ANA
+
+*** SEMOGA ALLAH MUDAHKAN TEMAN - TEMAN DALAM MENGERJAKAN EVALUASI AAMIIN ***

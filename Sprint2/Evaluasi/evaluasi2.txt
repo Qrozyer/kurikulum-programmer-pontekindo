@@ -14,6 +14,7 @@ SPRINT 2 - SOAL EVALUASI 2
 - apabila selain dari itu semua maka menampilkan kalimat 'barang common'
 
 3. Ubah tipe data string berikut ke bentuk array : 'Aqidah & Fiqih & Hadits & Tafsir & Tajwid & Adab'
+
 4. $array = [-2,4,-18,9,0,21,-5];
 - urutkan array berikut dari yang terbesar
 - pisahkan antara data yang bernilai negatif dan positif
