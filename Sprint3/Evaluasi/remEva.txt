@@ -1,0 +1,67 @@
+BISMILLAH
+SPRINT 3 - SOAL EVALUASI 3
+
+# CATATAN :
+* Jangan mau hanya menjadi biasa-biasa saja dalam mengerjakan suatu hal
+* KEJARLAH NILAI SEMPURNA
+* Manfaatkan waktu 5 menit terakhir untuk push ke repository masing-masing di github
+* Kerjakan dengan jujur dan penuh keyakinan
+* Jangan pesimis dan OPTIMIS lah
+* Dilarang keras untuk bekerja sama
+* Idealis lah dengan diri sendiri jangan mau ketinggalan
+* FOKUS!!!
+
+1. Buat function dengan nama keyGanjil yang mana function tersebut akan menampilkan 3 data dengan key yang ganjil setelah diurut dari nilai kecil ke besar dari data berikut
+[24, 79, 32, 65, 82, 15]; // urut,foreach,key,pengkondisian
+
+2. Masukkan Argumen ini "Syifa","Hanif,"Danu","Hafidz","Dimas","Faqih" dalam suatu fungsi bernama ubahData, gunakan variable length argument dan ubah data tadi menjadi output : 
+* Dengan variable function sebagai argumen. Pakai fungsi bawaan PHP yang mengubah array jadi string
+DANU
+DIMAS
+FAQIH
+HAFIDZ
+HANIF
+SYIFA
+
+3. Buat program mengkategorikan keamanan pulau dressrosa :
+- Apabila ada lebih dari 50 bajak laut, mengembalikan keterangan 'Tidak Aman'
+- Apabila 30-50 orang, mengembalikan keterangan 'Kurang Aman'
+- Apabila 10-30 orang, mengembalikan keterangan 'Agak Aman'
+- Apabila kurang dari 10 orang, mengembalikan keterangan 'Aman'
+- Apabila tidak ada bajak laut, mengembalikan keterangan 'Sangat Aman'
+Dengan menggunakan closure dan input dinamis yang berada di luar function tsb.
+
+4. Buat Function dgn nama staticVariable tanpa sebuah parameter, dan berisi di dalamnya input dinamis dan variable static dgn value 3, lalu echo variable static td, setelah ditampilkan kemudian nilai variable static dikali input dinamis (operator penugasan)
+*jalankan fungsinya sebanyak 5 kali
+
+5. Ketik data berikut di file evaluasi : $hargaProduk = [12000,31000,25000,40000,17000];
+Lalu, buat file baru yang berisi hanya function hargaProduk dengan program menampilkan harga yang terkecil.terbesar,& rata-rata
+*Gunakan function dari PHP Math dan include
+*Jalankan functionnya di file evaluasi
+
+EVALUASI 4
+
+*Untuk soal berikut harap discreenshot jelas & lengkap tidak ada yang terlewat
+1. Buat database PontekindoMart. Lalu impor database dari link berikut : 
+2. Masuk database dengan nama PontekindoMart lalu tambah kolom harga pada tabel produk, dan isi harga pada masing-masing produk, ubah kolom kategori menjadi enum('snack','roti','minuman','permen'), masukkan 5 data tambahan ke dalam tabel produk. Tampilkan semua data dalam tabel seller lalu hapus tabel seller dari database
+3. Ubah harga data id ke-5 menjadi 7000, hapus data dengan harga di atas 5000, tampilkan data dengan kategori minuman dan snack yang harganya di bawah 4000 batasi tampil cukup 3 data saja
+4. Tampilkan jumlah data, harga termurah, harga tertinggi, rata-rata, dan jumlah total semua harga dengan alias!
+5. Ekspor database menggunakan mysqldump dan upload ke repo github
+
+------
+
+*** KERJAKAN DENGAN JUJUR DAN MULAI DARI YANG TERMUDAH ***
+
+*** KERJAKAN DENGAN TELITI CEK ULANG SEBELUM DIKUMPULKAN ***
+
+*** KALIAN BOLEH LIHAT SUMBER DARI ***
+1. php.net
+2. w3schools
+3. stackoverflow 
+4. mysql.com
+
+*** SEBELUM MEMULAI EVALUASI, PERTAMA BERDOA TERLEBIH DAHULU - WAKTU MENGERJAKAN SAMPAI JAM 10 ***
+
+*** EVALUASI KALIAN PUSH KE GITHUB DENGAN FOLDER EVALUASI3 DI DALAM REPO KURIKULUMPROGRAMMERPOTEKINDO - KIRIM LINK GITHUB KE GOOGLE CLASSROOM ***
+
+*** SEMOGA ALLAH MUDAHKAN TEMAN - TEMAN DALAM MENGERJAKAN EVALUASI AAMIIN ***
