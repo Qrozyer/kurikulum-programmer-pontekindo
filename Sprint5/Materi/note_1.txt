@@ -1,0 +1,11 @@
+Kenapa database dibuat terpisah-pisah?
+Untuk memudahkan specify suatu kolom. Dan dalam pengerjaannya tidak perlu dilakukan satu persatu.
+
+Foreign Key
+
+Foreign Key berhubungan erat dengan Constraint/penamaan dalam database.
+
+Behavior Foreign Key
+
+RESTRICT: akan menolak query penghapusan atau perubahan Foreign Key yang bersangkutan.
+CASCADE; akan dijalankan.
