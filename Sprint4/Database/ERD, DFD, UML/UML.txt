@@ -1,0 +1,15 @@
+Unified Modeling langluage
+ Dapat memberikan bahasa pemodelan visual kepada pengguna
+ Disebut juga blueprint software 
+ Dapat menciptakan suatu bahasa pemodelan yang digunakan oleh manusia maupun mesin
+
+Jenis-jenis diagram:
+    1. Usecase Diagram
+     menggambarkan interaksi antara sistem dan aktor, use case juga dapat men-deskripsikan tipe interaksi antara si pemakai sistem dengan sistemnya
+    2. Activity Diagram
+     dapat memodelkan proses-proses apa saja yang terjadi pada sistem
+    3. Sequence Diagram
+     interkasi objek yang berdasarkan urutan waktu
+    4. Class Diagram
+     mampu menggambarkan mengenai sistem maupun relasi-relasi yang terdapat pada sistem tersebut
+    5. Statemachine Diagram

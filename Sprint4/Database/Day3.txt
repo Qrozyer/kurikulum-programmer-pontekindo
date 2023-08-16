@@ -1,0 +1,171 @@
+DDL(Data definition langluage), pendefinisian struktur suatu database.
+CREAT, USE, DROP, SHOW, TEBLE
+
+DML(Data manipulation langluage), untuk memanipulasi sebuah data dalam table.
+INSERT INTO, UPDATE, DELETE, SELECT
+
+DCL(Data control langluage), biasa digunakan untuk merubah hak akses, dll.
+
+
+Catatan : ketika kita memasukkan banyak data yang mana auto_increment ditambahkan ketika table sudah ada maka terkadang akan mendapatkan eror, artinya lebih bagus untuk menambahkan auto_increment di awal saat pembuatan agar tidak terjadi eror
+======================================================
+INSERT INTO user(username,password) VALUES ('kyomz',345),('flazeky',111),('faqih',555),('hanif',222),('syifa',333);
+======================================================
+
+Alias untuk column dan table, untuk mengubah nama column atau select data artinya OUTPUT dari command SELECT bakal tertampil sesuai yang telah disetting melalui AS di bawah. ini nanti akan sangat berguna di keadaan-keadaan tertentu.
+
+SELECT username AS 'nama',
+password AS 'P' FROM user;
+
+SELECT U.username AS 'nama',
+U.password AS 'P' FROM user AS U;
+Catatan : untuk U di bagian FROM () AS (...U); Maka tidak perlu menggunakan tanda petik.
+
+
+Command-command :
+SELECT ; untuk menampilkan atau echo di php
+SELECT * FROM book ORDER BY name; agar sortir otomatis. (ASD & DESC)
+SELECT * FROM book ORDER BY description DESC; sortir secara terbalik
+-ORDER BY (column) ASC atau DESC
+
+SELECT * FROM book WHERE description LIKE '%an%' ORDER BY description; 
+-LIKE masih tetap akan di cari walaupun huruf nya capital(tidak case sensitive) bisa %a atau a% dan yang %a%.
+SELECT * FROM book WHERE description LIKE '%ng%' ORDER BY description LIMIT 2;
+-LIMIT (number) agar menghkusus kan yang akan di tampilkan
+ 
+ 
+    Urutan yang benar dan ini case sensitive :
+    SELECT * 
+    FROM
+    WHERE
+    LIKE
+    ORDER BY
+    LIMIT
+
+
+SELECT * FROM book WHERE description IS NULL;
+-IS NULL 
+-IS NOT NULL
+kurang lebih mirip dengan php langluage is null.
+
+FROM book WHERE description IS NULL AND id BETWEEN 6 AND 12;
+-BETWEEN () AND (); berguna untuk menampilkan sebagian dari database, penggunaan nya menampilkan !!diantara!!, kurang lebih ga jauh beda maksud !!diantara!! tersebut
+
+SELECT * FROM book  WHERE status IN ('available');
+-IN kurang lebih sama seperti menggunakan ='available'
+
+SELECT COUNT(price) AS 'Total Jumlah Data' FROM book; yang ditampilkan 12 
+SELECT SUM(price) AS 'Total Jumlah Harga' FROM book; yang ditampilkan 691000
+SELECT AVG(price) AS 'Rata-Rata Harga' FROM book; untuk rata-rata
+SELECT MIN(price) AS 'Harga Terendah' FROM book;
+SELECT MAX(price) AS 'Harga Tertinggi' FROM book;
+
+
+=======================================================
+History 1 : 
+
+DELETE FROM book WHERE id = 1;
+ALTER TABLE book MODIFY id INT AUTO_INCREMENT;
+
+INSERT INTO book (name,description,status) VALUES ('kambing hitam','si kambing yang tampan dan pemberani','sold out'),('babi ngesot','babi jadi-jadian yang cosplay jadi hantu','sold out'),('cinta brontosaurus','melebihi cinta monyet','sold out'),('marmut merah jambu','masa cinta yang imut','sold out'),('manusia setengah salmon','mending hidup jadi salmon','available');
+INSERT INTO book 
+(name,description,status)
+VALUES
+('radikus makan kakkus','makan jagung lebih uenak','available'),
+('koala kumal','nggak hanya palaian yang bisa kumal','available'),
+('ubur-ubur lembur','capeknya kerja jadi ubur-ubur','sold-out');
+
+======================================================= History 2
+INSERT INTO book 
+(name,description,status)
+VALUES
+('kambing jantan','si kambing yang tampan dan pemberani','sold out'),
+('babi ngesot','babi jadi-jadian yang cosplay jadi hantu','sold out'),
+('cinta brontosaurus','melebihi cinta monyet','sold out'),
+('marmut merah jambu','masa cinta yang imut','sold out'),
+('manusia setengah salmon','mending hidup jadi salmon','available'),
+('radikus makan kakus','makan kangkung lebih uenak','available'),
+('koala kumal','nggak hanya palaian yang bisa kumal','available'),
+('ubur-ubur lembur','capeknya kerja jadi ubur-ubur','sold out');
+
+SELECT name AS 'Nama Buku', description AS 'Sinopsis', quantity AS 'Stok', status FROM book WHERE id > 2 AND id < 8;
+SELECT name AS 'Nama Buku', description AS 'Sinopsis', quantity AS 'Stok', status FROM book WHERE id > 2 AND id < 8 AND status='available';
+
+
+
+SELECT * FROM book ORDER BY name;
+SELECT * FROM book ORDER BY description DESC;
+SELECT * FROM book WHERE description LIKE '%ng%' ORDER BY description LIMIT 2;
+
+ALTER TABLE book ADD COLUMN category VARCHAR(100) NOT NULL;
+ALTER TABLE book MODIFY category INT AFTER name; untuk mengedit sebuah desc (nama_table)
+UPDATE book SET category = 'comedy' WHERE id = 1;
+SELECT LAST_INSERT_ID(); melihat id terakhir
+
+ALTER TABLE book ADD COLUMN price INT NOT NULL AFTER description; menambahkan column!!
+UPDATE book SET price = 48000 WHERE id = 1;
+UPDATE book SET price = 51000 WHERE id = 2;
+UPDATE book SET price = 50000 WHERE id = 3;
+UPDATE book SET price = 55000 WHERE id = 4;
+UPDATE book SET price = 60000 WHERE id = 5;
+UPDATE book SET price = 58000 WHERE id = 6;
+UPDATE book SET price = 52000 WHERE id = 7;
+UPDATE book SET price = 55000 WHERE id = 8;
+UPDATE book SET price = 65000 WHERE id = 9;
+UPDATE book SET price = 62000 WHERE id = 10;
+UPDATE book SET price = 67000 WHERE id = 11;
+UPDATE book SET price = 68000 WHERE id = 12;
+SELECT COUNT(price) AS 'Total Jumlah Data' FROM book; yang ditampilkan 12 
+SELECT SUM(price) AS 'Total Jumlah Harga' FROM book; yang ditampilkan 691000
+SELECT AVG(price) AS 'Rata-Rata Harga' FROM book; untuk rata-rata
+SELECT MIN(price) AS 'Harga Terendah' FROM book;
+SELECT MAX(price) AS 'Harga Tertinggi' FROM book;
+
+SELECT * FROM book WHERE price = (SELECT MAX(price) FROM book);
+SELECT * FROM book WHERE price = (SELECT MIN(price) FROM book);
+
+SELECT * FROM book WHERE price = (SELECT MAX(price) FROM book);
+SELECT * FROM book WHERE price = (SELECT MAX(price) FROM book) LIMIT 1; yang tertampil hanya satu saja
+SELECT * FROM book WHERE price = (SELECT MAX(price) FROM book) LIMIT 1,1; yang tertampil di skip 1 kali, lalu dimunculkan satu saja, jika LIMIT 2,1 maka 2 kali loncatan lalu satu data dimunculin.
+
+SELECT category,COUNT(id) AS 'Total Buku' FROM book GROUP BY category; memuncul kan melihat total semua product, tapi per category
+
+SELECT category,COUNT(id) AS 'total' FROM book GROUP BY category HAVING total > 2;
+agar melihat yang lebih spesifik dari category yang buku nya lebih dari 2
+
+SELECT status,COUNT(id) AS 'total' FROM book GROUP BY status HAVING total > 1;
+SELECT status,COUNT(id) AS 'total' FROM book GROUP BY status HAVING status = 'sold out';
+
+CREATE TABLE pencil (
+id INT NOT NULL PRIMARY_KEY AUTO_INCREMENT,
+name VARCHAR(100),
+price INT NOT NULL,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
+CONSTRAINT price_check CHECK (price >= 1500)
+);
+
+fungsi dari CONSTRAINT ialah membuat sebuah variable/function sehingga artinya yang di atas price_check=CHECK (price >= 1500); adapun di dalam CONSTRAINT bisa diisi selain CHECK sehingga tidak menjadi sebuah validasi
+
+kita bisa menggunakan index ketika kita mencari suatu data yang sangat banyak, kita juga bisa membuat lebih dari satu index di table,
+efek samping nya, mysql akan membuat update data sedikit lambat.
+untuk PRIMARY_KEY dan UNIQUE sudah otomatis ada index nya.
+
+
+
+
+
+
+
+ALTER TABLE pencil ADD INDEX name_index (name);
+
+CREATE TABLE pencil1(
+    -> name VARCHAR (100),
+    -> price INT NOT NULL,
+    -> CHECK (price >=1500),
+    -> INDEX ind (name)
+    -> );
+
+index ga harus dikasih nama
+CONSTRAINT harus ada nama untuk identitasin;
+
+

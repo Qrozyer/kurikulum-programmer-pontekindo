@@ -1,0 +1,38 @@
+ALTER TABLE Profil ADD CONSTRAINT fk_user FOREIGN KEY (id_user) REFERENCES User(Username);
+
+
+INSERT INTO Profil_Detail (Fullname,Address,Phone_Number) VALUES 
+('Farros Royyan','Karawang','019238324324'),
+('Muhammad Hafidz','Pontianak','1204872344'),
+('Zaenal Abidin','Purbalingga','34597243413'),
+('Nanda Cristoper','Bekasi','03458243242'),
+('Evan Etenia Sandy','Tegal','2450843753'),
+('Pendi Pratama','BumiAyu','825725702432'),
+('Ghulam Haidar Shabir','Cilacap','3249543853'),
+('Maechel Alantra','Cilacap','49504352423'),
+('Luthfi Dwi Nugroho','Cilacap','4325894345'),
+('Sulaiman Hanafi','Ajibarang','58403453453');
+
+INSERT INTO User (Username,Email,Password) VALUES 
+('roy.anss','karawangdong@gmail.com','main_sini'),
+('hfdzz','masihdipantau@gmail.com','terdampar_di_jawa'),
+('zen.zenn','hobikujalan2@gmail.com','jangan_lupa_refreshing'),
+('nandzz','jalanjalankebekasi@gmail.com','cakepp'),
+('epan','sahabatjalanninjaku@gmail.com','UIMtujuan.ku'),
+('pendi','yuhgass@gmail.com','dolan.yuh'),
+('shabir','shbr@gmail.com','yuh.ring.umahe.nyong'),
+('alan','hehe4siuuuuu@gmail.com','siuu123'),
+('luthfi','syuuut@gmail.com','okeehh'),
+('sule.nicee','nngumah@gmail.com','nyng.enteni.kiee');
+
+INSERT INTO Profil (Nickname,id_user,id_profil_detail) VALUES 
+('Roy','1','1'),
+('Pis','2','2'),
+('bandar mie','3','3'),
+('jubah agung','4','4'),
+('juara 1 kelas','5','5'),
+('pen','6','6'),
+('bos cilacap','7','7'),
+('nomor 7 quinta','8','8'),
+('luthfi','9','9'),
+('leeee_meneng_koo!!','10','10');

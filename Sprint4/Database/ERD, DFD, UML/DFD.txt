@@ -1,0 +1,20 @@
+Data Flow Diagram
+ sering digunakan dalam membangun sebuah sistem informasi, dan kurang lebih mirip flowchart.
+ ini merupakan sebuah diagram dengan pendekatan tersetruktur(ya.. biar lebih mudah dipahami makanya gunakan kaya flowchart ini).
+Perlu diingat ini merupakan proses dekomposisi data nantinya (data flow diagram).
+
+Elemen-elemen DFD
+    1.Terminator/External Entity
+     mirip dengan yang di ERD. terminator tidak boleh memproses data.
+    2.Data Flow
+     Garis, umumnya satu arah.
+    3.Process(Atribut jika di ERD)
+     bentuknya oval, untuk memrposes suatu data.
+    4.Storage
+     bentuknya dua garis paralel, data flow in = di ubah, data flow out = dibaca.
+    
+
+
+
+
+

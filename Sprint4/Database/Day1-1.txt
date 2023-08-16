@@ -1,0 +1,17 @@
+
+
+Untuk DBMS atau DataBaseManagementSystem, nanti nya kita hanya mengirimkan sebuah command yang nanti dapat memanipulasi sebuah database.
+jadi kita tidak perlu untuk mendownload, ataupun menyimpan dalam sebuah file exel, cukup mengirim pesan ke DBMS tersebut.
+
+Contoh-contoh DBMS MySql, PostgreSQL, MongoDB, Oracle Dll.
+Jenis-Jenis Database; relational database, document database, key-value database.
+Database client adalah aplikasi yang digunakan untuk berkomunikasi dengan DBMS.
+Cara kerja DBMS; Database client=>DBMS=>Database file. Jadi contoh ketika kita membuat sebuah data MVC lalu kita hositng ke Niagahosting, maka Database tersebut pun di simpan di dalam Webhosting itu.
+Database file disimpan dalam bentuk nonbinary(tidak-bisa-dibaca) dan lain sebagainya. Beda data base beda cara mereka dalam menyimpan file database nya.
+
+MySQL Community vs MySQL Enterprise
+Yang free MySql Community.
+Kerkurangannya jika menggunakan MySQL Community, maka kita harus tangani semanya sendiri, dari masalah dan monitoring MySQL nya.
+
+Database adalah sebuah folder yang menyimpan sebuah table. Database=folder.
+Jika kita membuat sebuah table maka satu kolom harus satu tipe data tidak lebih atau kurang. Apabila kita sudah menentukan sebuah tipe data pada column maka data tersebut sudah constant.

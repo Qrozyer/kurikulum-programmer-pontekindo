@@ -1,0 +1,57 @@
+Tipe-Tipe Data:
+    -Tipe Data integer, perlu diperhatikan bagian smallint dan mediumint namun yang sering di gunakan ialah int saja, dan ini termasuk dari type data. 
+    -Yang sering digunakan ialah float dan int. untuk 2 hal ini memiliki 2 jenis ada yang signed(dimulai dari bilangan minus) dan ada yang unsigned(tidak ada bilangan minus)
+    -Type Data Decimal, contoh DECIMAL(5,2) artinya 5 panjangnya, dan 2 decimal dari panjangnya yang 5 ada juga DECIMAL(3,1), DECIMAL(5,0), DECIMAL(3 yang ini tidak ada decimal namun cukup panjangnya saja)
+    -Number Attribute. Type(N) jarang di pelajari begitu pula Zerofill. Contoh zerofill INT(3) lalu kita isi table nya 7 maka yang ditampilkan ialah 007
+    -Jika kita gunakan select option maka database yang sesuai untuk kita gunakan berupa Type Data Enum.
+    -Type data time dan date maka yang sering digunakan ialah timestamp.
+    -Tipe data Boolean
+======================================================
+Tipe-Tipe String:
+    -Perbedaan CHAR dan VARCHAR ialah CHAR lebih memakan strotage dari pada VARCHAR ketika data diisi 1 maka = 4 bytes, namun jika varchar diisi 1 maka = 1 byte.
+    -Perbedan TEXT dengan 2 tipe di atas, ialah jika text sudah di tentukan panjang dari karakter tersebut berbeda dengan varchar & char yang mana kita harus memberi keterangan akan panjangnya dengan buka,tutup kurung.
+    -ENUM merupakan tipe data string yang telah di tentukan inputan nya, artinya kita hanya mengisi sesuai dengan default yang telah ditentukan di awal. atau lebih dikenal dengan option, ketika kita memasukkan input yang berbeda maka terjadi eror 
+=======================================================
+Daftar Command-Command :
+
+SHOW ENGINES;
+INSERT INTO "nama_table" (id,status,description,quantity) VALUES (1,'','',9); mengisi data pada table dan ini sangat penting 
+SELECT * FROM "nama_table"; melihat isi dari table
+UPDATE "nama_table" SET .... id = 4 , description = 'buku_4' WHERE .... id = 4 ;
+DELETE FROM "nama_table" WHERE ...;
+
+ALTER TABLE "nama_table" ADD PRIMARY KEY (id); untuk menambahkan attribute
+
+CREATE TABLE "nama_table" (id INT PRIMARY KEY NOT NULL,
+ username VARCHAR(100) UNIQUE,
+ password TEXT NOT NULL);
+ 
+ALTER TABLE "nama_table" MODIFY COLUMN id INT AUTO_INCREMENT; untuk mengedit yang MODIFY COLUMN & untuk auto_increment berfungsi agar terisi secara otomatis untuk yang id;
+=======================================================
+jika kita menggunakan primary key maka di dalam primary key sudah memiliki unique, dan setiap table memiliki primary key. Uique sama persis constant variable.
+Primary key kita gunakan agar data tidak tertimpa.
+Hati-Hati jika DELETE FROM tanpa where maka akan ter-reset
+=======================================================
+History :
+
+CREATE TABLE book(
+id INT NOT NULL, name VARCHAR(50),
+description TEXT, 
+quantity INT DEFAULT 1, 
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+status ENUM('sold out','available')
+);
+
+UPDATE book SET 
+id = 4, 
+name = 'radikus makan kakus',
+description = 'makan kangkung lebih enak', 
+quantity = 2 
+WHERE status = 'sold out';
+
+UPDATE book SET 
+id = 2, name = 'buku_2', 
+description = 'contoh-description', 
+quantity = 5 
+WHERE status = 'available' AND quantity = 8;
+
