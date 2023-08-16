@@ -13,10 +13,10 @@ SPRINT 4 - SOAL EVALUASI 4
 
 # SOAL
 *Untuk soal berikut harap discreenshot jelas & lengkap tidak ada yang terlewat
-1. Impor database dari link berikut : 
-2. Masuk database dengan nama PontekindoMart lalu tambah kolom harga pada tabel produk, dan isi harga pada masing-masing produk, ubah kolom kategori menjadi enum('snack','roti','minuman','permen'), masukkan 5 data tambahan ke dalam tabel produk
-3. Ubah harga data id ke-5 menjadi 7000, hapus data dengan harga di atas 5000, tampilkan data dengan kategori minuman dan snack yang harganya di bawah 5000 batasi tampil cukup 3 data saja
-4. Tampilkan jumlah data, harga termurah, harga tertinggi, rata-rata, dan jumlah total semua harga!
+1. Buat database PontekindoMart. Lalu impor database dari link berikut (download): https://github.com/Qrozyer/kurikulum-programmer-pontekindo/blob/main/Sprint4/Evaluasi/PontekindoMart.sql
+2. Masuk database dengan nama PontekindoMart lalu tambah kolom harga pada tabel produk, dan isi harga pada masing-masing produk, ubah kolom kategori menjadi enum('snack','roti','minuman','permen'), masukkan 5 data tambahan ke dalam tabel produk. Tampilkan semua data dalam tabel seller dengan aliaskan nama sebagai penjual,produk sebagai jualan, kategori_produk sebagai kategori. Hapus tabel seller dari database
+3. Ubah harga data id ke-5 menjadi 7000, hapus data dengan harga di atas 5000, tampilkan data dengan kategori minuman dan snack yang harganya di bawah 4000 batasi tampil cukup 3 data saja
+4. Tampilkan jumlah data, harga termurah, harga tertinggi, rata-rata, dan jumlah total semua harga dengan alias!
 5. Ekspor database menggunakan mysqldump dan upload ke repo github
 ------
 

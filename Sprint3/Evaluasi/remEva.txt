@@ -31,10 +31,8 @@ SYIFA
 - Apabila tidak ada bajak laut, mengembalikan keterangan 'Sangat Aman'
 Dengan menggunakan closure dan input dinamis yang berada di luar function tsb.
 
-4. Buat Function dgn nama staticVariable tanpa sebuah parameter, dan berisi di dalamnya input dinamis dan variable static dgn value 3, lalu echo variable static td, setelah ditampilkan kemudian nilai variable static dikali input dinamis (operator penugasan)
-*jalankan fungsinya sebanyak 5 kali
 
-5. Ketik data berikut di file evaluasi : $hargaProduk = [12000,31000,25000,40000,17000];
+4. Ketik data berikut di file evaluasi : $hargaProduk = [12000,31000,25000,40000,17000];
 Lalu, buat file baru yang berisi hanya function hargaProduk dengan program menampilkan harga yang terkecil.terbesar,& rata-rata
 *Gunakan function dari PHP Math dan include
 *Jalankan functionnya di file evaluasi
@@ -42,8 +40,8 @@ Lalu, buat file baru yang berisi hanya function hargaProduk dengan program menam
 EVALUASI 4
 
 *Untuk soal berikut harap discreenshot jelas & lengkap tidak ada yang terlewat
-1. Buat database PontekindoMart. Lalu impor database dari link berikut : 
-2. Masuk database dengan nama PontekindoMart lalu tambah kolom harga pada tabel produk, dan isi harga pada masing-masing produk, ubah kolom kategori menjadi enum('snack','roti','minuman','permen'), masukkan 5 data tambahan ke dalam tabel produk. Tampilkan semua data dalam tabel seller lalu hapus tabel seller dari database
+1. Buat database PontekindoMart. Lalu impor database dari link berikut (download): https://github.com/Qrozyer/kurikulum-programmer-pontekindo/blob/main/Sprint4/Evaluasi/PontekindoMart.sql
+2. Masuk database dengan nama PontekindoMart lalu tambah kolom harga pada tabel produk, dan isi harga pada masing-masing produk, ubah kolom kategori menjadi enum('snack','roti','minuman','permen'), masukkan 5 data tambahan ke dalam tabel produk. Tampilkan semua data dalam tabel seller dengan aliaskan nama sebagai penjual,produk sebagai jualan, kategori_produk sebagai kategori. Hapus tabel seller dari database
 3. Ubah harga data id ke-5 menjadi 7000, hapus data dengan harga di atas 5000, tampilkan data dengan kategori minuman dan snack yang harganya di bawah 4000 batasi tampil cukup 3 data saja
 4. Tampilkan jumlah data, harga termurah, harga tertinggi, rata-rata, dan jumlah total semua harga dengan alias!
 5. Ekspor database menggunakan mysqldump dan upload ke repo github
