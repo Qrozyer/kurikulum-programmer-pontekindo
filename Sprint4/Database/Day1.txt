@@ -1,0 +1,45 @@
+DataBase, terdapat MySql dan NonSql. Permisalan nya rak buku
+
+Satu Aplikasi untuk satu DataBase, walaupun bisa namun lumrah nya ya satu app buat satu database.
+DBMS database management server, MySql termasuk DBMS
+Di dalam DataBase (folder) MySql terdapat table-table
+SQL atau structured query langluage, kalau bisanya kita pakai syntax, adapun Sql ini menggunakan query, artinya berbeda antara dua hal tadi 
+SQL adalah DBMS yang paling populer Free, ada juga yang berbayar yaitu oracle 
+
+Secara umum perintah MySql ada 3
+DDL(Data definition langluage), pendefinisian struktur suatu database.
+DML(Data manipulation langluage), untuk memanipulasi sebuah data dalam table.
+DCL(Data control langluage), biasa digunakan untuk merubah hak akses, dll
+
+Catatan:varchar adalah string
+=======================================================
+Command-Command yang di perlukan:
+
+SHOW DATABASES; jangan lupa S di akhir
+CREATE DATABASE (Nama_file);
+USE (Nama_file); fungsi nya sama seperti change direction(cd) di terminal
+DROP DATABASE (Nama_file); menghapus database
+DESC (Nama_table); untuk membuka table-table
+
+CREATE TABLE (Nama_table)
+(
+    id int,
+    nama varchar,
+    usia int
+); Membuat table
+
+ALTER TABLE
+ADD gender varchar(20),       
+DROP COLUMN usia,
+RENAME COLUMN nama TO username,
+MODIFY id varchar(100) AFTER gender;
+=======================================================
+Catatan Kecil :
+
+mengedit sebuah table menggunakan ALTER TABLE (Nama_file)
+Add => menambahkan
+DROP => menghapus
+Dan lain lain.
+SHOW TABLES; Jangan Lupa S di akhir 
+DESC (Nama_file);
+

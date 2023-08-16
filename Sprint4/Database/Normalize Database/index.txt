@@ -1,0 +1,71 @@
+Di dalam sebuah normalisasi database terdapat :
+    Tahapan Normalisasi
+    Unnormalized Form (UNF) -> bentuk tidak normal
+
+    |   Menghilangkan perulangan dalam column di setiap row group
+    V
+
+    First Normal Form (1NF) 
+
+    |   Menghilangkan ketergantungan sebagian
+    V
+
+    Second Normal Form (2NF)
+
+    |   Menghilangkan ketergantungan transitif
+    V
+
+    Third Normal Form (3NF)
+
+    |   Menghilangkan anomali-anomali hasil dari ketergantungan fungsional
+    V
+
+    Boyce-Codd Normal Form (BCNF)
+
+    |   Menghilangkan ketergantungan multivalue
+    V
+
+    Fourth Normal Form (4NF)
+
+    |   Menghilangkan anomali-anomali 
+    V
+
+    Fifth Normal Form (5NF)
+
+
+Normalisasi Database adalah proses pengorganisasian dan penataan database untuk mengurangi redundansi data. Anda dapat menghindari kesalahan input data, penghapusan tidak disengaja, dan Anda juga memudahkan proses pembaruan data.
+
+Manfaat Normalisasi Data :
+ - Normalisasi database mencegah masalah dan membuat pemeliharaan database lebih mudah. Sekali lagi, ini akan menghindari pemborosan sumber daya dan uang.
+ - Normalisasi data menyebabkan berkurangnya ruang penyimpanan database Anda.
+
+Siapa saja yang membutuhkan normalisasi data?
+ - Analisis Data
+ - Software Developer
+ - Bisnis
+ - Professional
+
+Kita akan mempelajari Unnormalized-3 Normal Form
+    1. Unnormalized Form:
+        ini merupakan data apa adanya, bisa di baca oleh kita dan lain-lainnya
+    2. 1NF, syaratnya adalah:
+        a. Tidak ada baris yang memiliki lebih dari satu value.
+        b. Setiap kolom harus berisi nilai atomik, sederhananya adalah nilai tersebut harus dipecah menjadi entitas(berwujud/keberadaan yang unik dan berbeda) sendiri. Katakanlah baris ke-1 yang awalnya berisi column no=NIM001, name=Ahmad dan seterusnya merupakan multivalue, maka kita ubah menjadi dua baris dengan column masing-masing memiliki no dan name yang sama agar menjadi sebuah nilai atomik.
+        c. Sederhananya column hanya boleh terhubung ke kunci utama seperti id nya saja.
+    3. 2NF, syaratnya adalah:
+        a. Sudah memenuhi 1NF.
+        b. Tidak diperkenankan adanya partial functional dependency(ketergantungan fungsional dan hanya sebagian).
+        c. Harus functional dependency sendiri bermakna setiap kolom dalam table berhubungan dengan kunci utama. Artinya harus berdiri sendiri, tidak bisa untuk banyak tergantung dengan functionl. Artinya setiap atribut harus langsung berelasi dengan PK(primary_key)/id.
+        d. Jika sebuah tabel memiliki lebih dari satu kolom yang tergantung pada kunci utama, maka kolom-kolom itu harus dipecah menjadi tabel terpisah.
+        e. Misal atribut/column A & B memiliki sebuah relasi atau A->B artinya B memiliki ketergantungan fungsional kepada A.
+    4. 3NF, syaratnya adalah:
+        a. Sudah memenuhi 2NF.
+        b. Tidak boleh ada transitive dependency dalam sebuah table.
+        c. Dalam kasus ini, atribut non-key ini bergantung secara tidak langsung pada kunci utama melalui atribut lain yang bukan kunci utama.
+        d. Misal A,B,C adalah atribut sebuah relasi. Jika A->B dan B->C, maka dikatakan C memiliki ketergantungan transitif pada A melalui B. Dan Ini tidak boleh.
+            Contoh lainnya: kita punya table
+            memiliki 4 column, column ke 3 berelasi kepada column 2 dan 1, column ke 4 berelasi ke column 3.
+            maka secara tidak langsung column ke 4 berelasi ke column ke 2 & 1. Maka hal seperti ini dilarang di 3NF.
+
+Untuk umumnya jika kita menggunakan 3NF maka sudah cukup dalam pengerjaan project dan yang semisalnya
+

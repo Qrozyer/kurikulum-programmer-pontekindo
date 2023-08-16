@@ -1,0 +1,61 @@
+ERD (Entity Relationship Diagram) 
+Lebih dikenal dengan objek-objek yang ada di flowchart.
+    itu terdapat simbol-simbol karena bebasiskan objek, yaitu merupakan suatu model untuk menjelaskan hubungan antar data dalam basis data berdasarkan objek-objek dasar data yang mempunyai hubungan antar relasi.
+
+Ada 4 simbol bahkan lebih, kita akan mempelajari 4 tersebut karena sering digunakan dan sudah sangat cukup:
+    1.  Persegi panjang
+        Entity/Entitas(suatu keberadaan). 
+        
+        Contoh kita memiliki persegi panjang yang banyak dan setiap persegi panjang hanya berisikan satu entitas(umumnya bisa lebih dari satu entitas namun untuk contoh kita gunakan satu entitas saja):
+        a. Persegi Panjang 1 Dosen.
+        b. Persegi Panjang 2 Mahasiswa.
+        c. Persegi Panjang 3 Matkul.
+        d. Persegi Panjang 4 Ruangan.
+        e. Persegi Panjang 5 Satpam.
+
+        Dapat disimpulkan bahwa entitas adalah obyek yang dapat dibedakan dengan yang lain dalam dunia nyata.
+
+    2.  Oval. Atribut 
+        karakteristik dari entity atau relationshi. Bagian-bagian dari entity, dan masing-masing atribut ini nantinya memiliki value.
+
+        Contoh: Persegi Panjang dengan value buku yang beratributkan; penerbit, pengarang, judul, dll.
+
+        Jenis-jenis Atribut
+            a.Atribut Key
+                Atribut yang diguanakn untuk menentukan suatu entity secara unik.
+            b.Atribut Simple
+                Atribut yang bernilai tunggal.
+            c.Atribut Multivalue
+                Atribut yang memiliki sekelompok nilai untuk setiap instan entity.
+
+            Contohnya:
+             adalah ketika kita memiliki pegawai, dan kita memiliki atribut NIP,Nama,Tgl_Lahir,Gelar. 
+                - NIP = A_Key, unique dan hanya bisa dimiliki oleh satu orang. Diimplementasikan sebagai garis di bawah tulisan
+                - Tgl_Lahir & Nama = A_Simple, Simple karena bisa saja di miliki oleh yang lain dalam arti orang lain juga bisa memiliki nama dan tanggal lahir yang sama.
+                - Gelar = A_Multivalue, Kenapa multivalue karena bisa saja lebih dari satu gelar. Diimplementasikan dengan bulat di dalam bulat.
+
+            d.Atribut Composite
+                Atribut yang terdiri dari beberapa atribut yang lebih kecil yang memiliki arti tertentu. Contoh: Nama memiliki 3 atribut berupa nama_depan, nama_tengah, nama_belakang.
+
+            e.Atribut Derivatif
+                atribut yang dihasilkan dari atribut lain. Contoh: pegawai memiliki atribut bervalue umur yang dihasilkan dari atribut Tgl_Lahir. 
+
+    3.  Persegi empat(tegak)
+        Hubungan yang terjadi antara satu atau lebih entity. Contoh entity mahasiswa berelasi dengan pergi ke entity perpustakaan.
+        
+        Derajat Relasi:
+            a. Unary Degree
+             entity mahasiswa bicara ke mahasiswa lain(masih dalam satu entity).
+            b. Binary Degree
+             entity mahasiswa berelasi dengan pergi ke entity perpustakaan.
+            c. Ternary Degree
+             entity mahasiswa berelasi ke entity ruangan dan berelasi ke matkul(terdapat lebih dari 2 entity)
+
+    4.  Garis (Kardinalitas ERD)
+        Terdapat:
+            a. One to One(1:1)
+             mahasiswa to universitas.
+            b. One to Many(1:n)
+             mahasiswa to hobby.
+            c. Many to Many(N:N)
+             mahasiswa to matkul.

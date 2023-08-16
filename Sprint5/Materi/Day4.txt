@@ -1,0 +1,73 @@
+Table Relationship:
+Misal, saat kita membuat aplikasi penjualan, di laporan penjualan pasti ada data barang. Jika di tabel artinya tabel penjualan akan berelasi dengan tabel barang
+
+materi_Foreign key:
+membuat foreign key sama seperti table biasanya cuman kita harus memberi tahu mysql agar ia tahu kita ingin foreign key bukan table
+
+keuntungan menggunakan Foreign key:
+tidak asal-asalan dalam menghapus suatu data. jadi ketika kita menghapus data table yang mana memiliki relasi dengan table lain maka akan ditolak karena 
+
+restrict // contoh kasus nya ialah contoh kita memiliki 3 data produk,penjual,penjualan lalu kita relasi kan dengan REFERENCES di penjualan ke produk dan penjual lalu ketika kita akan menghapus data yang ada di dalam produk dan penjual maka akan terjadi eror. Apa yang ada di dalam REFERENCES nantinya tidak bisa di otak-atik kecuali di update.
+
+ada yang nama nya table induk dan table parent
+table parent akan selalu mengikuti table induk
+Contoh: 
+FOREIGN KEY (column) REFERENCES nama_table_yg_lain (columnnya) ON DELETE CASCADE/RESTRICT ON UPDATE CASCADE/RESTRICT
+
+pada umumnya delete menggunakan restrict dan update cascade
+
+
+
+
+cascade
+
+constraint index
+constraint check
+constraint unique
+constraint foreign key
+
+constraint sebagai penamaan atau pendefinisan
+
+
+
+
+========================================================
+history : 
+CREATE TABLE penjual (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,name VARCHAR(255) UNIQUE);
+
+CREATE TABLE penjualan (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    id_produk INT, id_penjual INT, 
+    FOREIGN KEY (id_produk) REFERENCES produk (id),
+    CONSTRAINT fk_penjualan_penjual FOREIGN KEY (id_penjual) REFERENCES penjual (id)
+    );
+
+fk(foreign key)
+pk(primary key)
+
+ALTER TABLE penjualan DROP FOREIGN KEY fk_penjualan_penjual, DROP id_penjual; // jika ingin menghapus constraint atau column yang memiliki constraint key
+ALTER TABLE penjualan DROP id_penjual; // jika memiliki constraint key maka akan tetjadi eror apabila menggunakan command ini
+ALTER TABLE penjualan ADD COLUMN id_penjual INT, ADD CONSTRAINT fk2344 FOREIGN KEY (id_penjual) REFERENCES penjual (id);
+
+SHOW CREATE TABLE penjual; // berguna untuk melihat penamaan foreign key yang telah kita berikan
+ALTER TABLE penjualan ADD COLUMN id_penjual INT, ADD CONSTRAINT fk_penjualan_penjual FOREIGN KEY (id_penjual) REFERENCES penjual(id);
+
+ALTER TABLE penjual DROP INDEX name; // ketika akan menghapus unique key gunakan ini
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

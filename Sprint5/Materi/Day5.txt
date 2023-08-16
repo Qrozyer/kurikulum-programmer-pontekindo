@@ -1,0 +1,63 @@
+untuk merelasikan table maka menggunakan foreign key
+
+JOIN
+    menampilkan data dari beberapa table sekaligus:
+        SELECT * FROM penjualan JOIN produk ON (produk.id = penjualan.id_produk);
+
+    Agar menampilkan lebih dari satu join gunakan seperti berikut:
+        SELECT * FROM penjualan JOIN produk ON (penjualan.id_produk=produk.id) JOIN kategori ON (produk.id_category=kategori.id);
+
+    ini berguna menampilkan sebagian, tidak keseluruhan data:
+        SELECT produk.name AS 'Nama Produk', stock AS 'stok', category AS 'Kategori Produk' FROM penjualan JOIN produk ON (penjualan.id_produk=produk.id) JOIN kategori ON (produk.id_category=kategori.id);
+
+
+Macam-macam jenis join:
+    1.  Inner join -> di mana terdapat relasi antara tabel pertama dan ke dua, ini adalah default dari join yang sudah kita lakukan seperti sebelumnya di 
+    2.  Left join. -> sama seperti inner join namun semua table yang pertama akan terambil sebagai, jika kita masukkan command select untuk melihat table pertama yang mana data tersebut tidak ada di table ke dua maka akan null, adapun jika table pertama memiliki data atau sesuai dengan data di table ke dua maka dapat dimunculkan isi data table nya.
+    3.  Right join -> mekanisme sama seperti inner join namun unutk lebih detail tentang penjelasan dapat dipahami lewat penjelasan di poin sebelumnya, tinggal di balik cara berpikirnya.
+    4.  Cross join -> jarang digunakan, mekanismenya ialah mengkalikan data di table pertama ke data di table ke dua.
+
+Jensi-Jenis Relasi table:
+    1.One to one relationship -> tidak boleh boleh lebih dari satu data yang berelasi, bisa menggunakan unique+foreign_key atau primary_key, one to one atau 1-1.
+
+    contoh: data A memiliki row yang salah satu column nya di relasi kan ke table B dan satu column yang ini hanya dapat di isi oleh satu data yang sesuai dengan table B, misalnya data tersebut INT maka column kelima dari row pertama di table A jika kita isi nilai '1', maka tidak bisa kita isi di column yang sama di row ke dua dengan nilai '1' pula. ini di sebabkan kita telah menambahkan primary_key atau unique.
+
+    2.One to many relationship
+    contoh: TABLE kategori, di DATABASE market;
+    relasi dari satu table yang tidak menggunakan primary_key atau unique key agar many relationship nya connect, misal kategori makanan bisa di pakai di beberapa row dengan nilai yang sama
+
+    3.Many to many.
+    contoh: TABLE penjual, di DATABASE market;
+    bisa dipahami dengan table yang memiliki relasi lebih dari satu table
+
+
+============================================================================
+History :
+
+CREATE TABLE kategori (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    category VARCHAR (255)
+);
+
+ALTER TABLE produk ADD COLUMN id_category, ADD FOREIGN KEY (id_category) REFERENCES kategori(id); 
+
+SELECT * FROM penjualan JOIN produk ON (produk.id = penjualan.id_produk);
+
+SELECT * FROM penjualan JOIN produk ON (penjualan.id_produk=produk.id) JOIN kategori ON (produk.id_category=kategori.id);
+
+SELECT produk.name AS 'Nama Produk', stock AS 'stok', category AS 'Kategori Produk' FROM penjualan JOIN produk ON (penjualan.id_produk=produk.id) JOIN kategori ON (produk.id_category=kategori.id);
+
+(tabel.column= table.column)
+bisa kita gunakan "select table.column" seperti yang barusan
+
+ALTER TABLE () ADD () INT UNIQUE, ADD CONSTRAINT ....;
+ALTER TABLE penjual CHANGE name nickname VARCHAR (255);
+ALTER TABLE market.penjual RENAME INDEX id_detail_penjual TO ();
+PENTING: 
+    1.  ALTER TABLE () DROP CONSTRAINT (); // berfungsi untuk menghilangkanforeign_key
+    2.  CARA HAPUS UNIQUE DENGAN MENGDROP INDEX (nama_index_unique)
+
+CREATE TABLE produk_detail(id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,id_produk INT,id_category INT,CONSTRAINT fk_id_produk FOREIGN KEY (id_produk) REFERENCES produk(id),CONSTRAINT fk_id_kategori FOREIGN KEY (id_category) REFERENCES
+kategori(id));
+PENTING:
+    1.  Dalam pembuatan CONSTRAINT PERLU DIPERHATIKAN TANDA KURUNG SETELAH FOREIGN KEY DAN SETELAH REFERENCES
