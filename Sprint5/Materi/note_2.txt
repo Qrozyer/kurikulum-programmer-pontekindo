@@ -1,0 +1,12 @@
+Query menampilkan lebih dari satu table.
+SELECT * FROM sales JOIN produk ON (produk.id = sales.id_produk) JOIN kategori ON (produk.id_category = kategori.id) JOIN penjualan ON (sales.id_penjual) = (penjualan.id);
+
+SELECT produk.name AS 'Nama Produk', stock AS 'Stok', kategori.category AS 'Kategori Produk', penjualan.name AS 'Nama Penjual' FROM sales JOIN produk ON (produk.id = sales.id_produk) JOIN kategori ON (produk.id_category = kategori.id) JOIN penjualan ON (sales.id_penjual) = (penjualan.id);
+
+
+CROSS JOIN: Adalah join dengan mengkalikan jumlah data.
+
+
+Rename nama index
+ALTER TABLE penjualan RENAME INDEX id_detail_penjual TO u_detail_penjual;
+
