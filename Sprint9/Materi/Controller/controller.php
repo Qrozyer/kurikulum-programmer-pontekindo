@@ -5,14 +5,15 @@ class Products extends Connection {
     var $satu;
     public $dua;
     protected $tiga = "tiga";
-    private string $name = "Hanif";
+    private string $name;
+    private $buah;
 
-    public function getName() { //getter
-        return $this->$name;
+    public function dapatNama() { //getter
+        return $this->buah;
     }
 
-    public function setName(string $name):void{ //setter                
-        $this->name = $name;
+    public function masukNama($a){ //setter                
+        $this->buah = $a;
     }
 
     function index(){
@@ -22,17 +23,18 @@ class Products extends Connection {
         return $products;
     }
 
-    public function tampilNama(){        
-        echo $this->name;
+    private function tampil3(){        
+        echo $this->tiga;
+    }
+
+    function tampilTiga(){        
+        self::tampil3();
     }
 }
 
 class Detail extends Products{
-    public function tampilTiga(){        
-        echo $this->tiga;
-    }
     public function tampilNama(){        
-        echo $this->name;
+        
     }
 }
 
@@ -45,14 +47,16 @@ echo "<br>";
 echo $oreo->dua;
 echo "<br>";
 // $oreo->tampilNama();
-echo "<br>";
 // echo $oreo->name;
 // echo $oreo->tiga;
-// $oreo->tampilTiga();
+// $oreo->tampil3();
 $detail = new Detail;
-// $detail->tampilTiga();
+$detail->tampilTiga();
+echo "<br>";
 // $detail->tampilNama();
 // $oreo->name = "Hanif";
 // echo $oreo->name;
-$oreo->setName("Hafidz");
-echo $oreo->getName();
+
+// $oreo->buah = "Pepaya";
+$oreo->masukNama("Pepaya");
+echo $oreo->dapatNama();
