@@ -13,6 +13,8 @@ namespace Data {
         const DB_NAME = "KuroMart";   
         const DB_USER = "root";
         const DB_PASSWORD = "";
+
+        var $pdo;
     
         function __construct(){
             try{
@@ -27,7 +29,8 @@ namespace Data {
         function index(){
             $index = "SELECT * FROM product_detail";
             $statement = $this->pdo->query($index);
-            $products = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $products = $statement->fetchAll(PDO::FETCH_OBJ);
+            return $products;
         }
     }
 }
