@@ -60,3 +60,4 @@ echo "<br>";
 // $oreo->buah = "Pepaya";
 $oreo->masukNama("Pepaya");
 echo $oreo->dapatNama();
+

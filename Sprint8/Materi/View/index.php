@@ -1,8 +1,8 @@
 <?php
 include_once "../Controller/class.php";
 use Data\{Laptop, Produk};
-use function Data\SayHi;
-use const Data\AUTHOR;
+
+
 
 $produk = new Produk();
 $index = $produk->index();
