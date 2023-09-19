@@ -19,5 +19,5 @@ function autoloadBar($class)
 spl_autoload_register("autoloadFoo");
 spl_autoload_register("autoloadBar");
 
-$foo = new Foo();
-$foo->someFunction();
+
+$bebek = new Bebek();
