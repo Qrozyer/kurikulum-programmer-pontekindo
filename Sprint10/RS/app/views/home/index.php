@@ -6,6 +6,12 @@
     <title>HOME</title>
 </head>
 <body>
-    <h1>HOME</h1>
+    <form action="<?= BASEURL; ?>/home/register" method="post">
+        <label for="username">Username</label>
+        <input type="text" name="username">
+        <label for="password">Password</label>
+        <input type="password" name="password">
+        <button type="submit" name="register">Register</button>
+    </form>
 </body>
 </html>
